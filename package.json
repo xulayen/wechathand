@@ -1,0 +1,39 @@
+{
+  "name": "wechathand",
+  "version": "1.0.0",
+  "description": "get wechat access_token and sign on nodejs platform ",
+  "main": "server.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node server",
+    "start": "NODE_ENV=production node server"
+  },
+  "keywords": [
+    "nodejs",
+    "wechat",
+    "access_token",
+    "sign"
+  ],
+  "author": "xulayen",
+  "license": "ISC",
+  "git": "https://github.com/xulayen/wechathand.git",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "form-data": "^2.3.1",
+    "http": "0.0.0",
+    "node-cache": "^4.1.1",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0",
+    "request": "^2.83.0",
+    "sha1": "^1.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xulayen/wechathand.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xulayen/wechathand/issues"
+  },
+  "homepage": "https://github.com/xulayen/wechathand#readme"
+}
