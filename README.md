@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-## 启动browserify
+## 调试browserify
 ``` js
 npm run watch
 ```
