@@ -16,3 +16,11 @@ if(isDev){
     console.log('App (dev) is now running on port '+PORT+'!');
     });
 }
+
+
+if(!process.env.NODE_ENV){
+      var server = http.createServer(app);
+    server.listen(PORT, function(){
+    console.log('App (debug) is now running on port '+PORT+'!');
+    });  
+}

@@ -16,25 +16,26 @@ function get_ticket(appId,access_token){
         method: 'get',
         url: reqUrl+qs.stringify(params)
     };
-    console.log('getticket:'+options.url);
+    console.log('\x1B[32m%s \x1B[0m','getticket:'+options.url);
     var ticket=myCache.get('jsapi_ticket'+appId);
     if(ticket===undefined){
         return new Promise((resolve, reject) => {
             request(options, function (err, res, body) {
                 if (res) {
-                    console.log('get ticket info!')
-                    console.log(body);
+                    console.log('\x1B[32m%s \x1B[0m','get ticket info!')
+                    console.log('\x1B[32m%s \x1B[0m',body);
                     myCache.set( "jsapi_ticket"+appId, body, 7200);
                     resolve(body);
                 } else {
+                    console.log('\x1B[31m%s \x1B[0m',err);
                     reject(err);
                 }
             });
         })
     }else{
         return new Promise((resolve, reject)=>{
-            console.log('ticket is not expire!');
-            console.log(ticket);
+            console.log('\x1B[32m%s \x1B[0m','ticket is not expire!');
+            console.log('\x1B[32m%s \x1B[0m',ticket);
             resolve(ticket);
         })
     }

@@ -17,17 +17,18 @@ function get_access_token(appId,appSecret){
         method: 'get',
         url: reqUrl+qs.stringify(params)
     };
-    console.log('get_access_token:'+options.url);
+    console.log('\x1B[32m%s \x1B[0m', 'get_access_token：'+options.url);  //cyan  
     var accessToken=myCache.get('accessToken'+appId);
     if(accessToken===undefined){
         return new Promise((resolve, reject) => {
             request(options, function (err, res, body) {
                 if (res) {
-                    console.log('get access info!')
-                    console.log(body);
+                    console.log('\x1B[32m%s \x1B[0m','get access info!')
+                    console.log('\x1B[32m%s \x1B[0m',body);
                     myCache.set( "accessToken"+appId, body, 7200);
                     resolve(body);
                 } else {
+                    console.log('\x1B[31m%s \x1B[0m',err);
                     reject(err);
                 }
             });

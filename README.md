@@ -4,11 +4,41 @@
 npm install
 ```
 
-## 使用
+## 启动nodejs
 
 ``` js
 npm run dev
 ```
-http://localhost:3031/access_token?appid=yourapapid&appsecret=yoursecret&url=http://www.baidu.com/aa
 
+## 启动browserify
+``` js
+npm run watch
+```
+
+## 浏览器中打开
+http://localhost:3031/
+
+
+## 目录结构
+``` html
+app             
+    access_token
+        webtoken.js
+    routes
+
+    signature
+        sign.js
+    ticket
+        ticket.js
+    app.js
+node_modules
+public  
+    build
+        bundle.js
+    main.js
+views
+    index.html
+package.json
+server.js 
+```
 
