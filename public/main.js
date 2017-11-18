@@ -11,8 +11,8 @@ var _w = require('jquery_wechat_sdk');
 // });
 
 var params={
-    appid:'wxc46c96addcb23ab9',
-    appsecret:'d4624c36b6795d1d99dcf0547af5443d',
+    appid:'yourappid',
+    appsecret:'yoursecret',
     timestamp:'1448938941',
     nonceStr:'k4DIrgjFCvQ2xRRE'
 }
