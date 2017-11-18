@@ -1,7 +1,7 @@
 var express=require('express');
 var path=require('path');
 var ejs=require('ejs');
-
+var logger = require('morgan');
 
 var app=express();
 
@@ -15,7 +15,7 @@ var getticket=require('./ticket/ticket');
 var getsign=require('./signature/sign');
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended:false}));
-
+app.use(logger('dev'));
 
 app.get('/',function(req,res){
      res.render('index.html');  

@@ -26,6 +26,7 @@
     "form-data": "^2.3.1",
     "http": "0.0.0",
     "jquery_wechat_sdk": "^1.4.4",
+    "morgan": "^1.9.0",
     "node-cache": "^4.1.1",
     "path": "^0.12.7",
     "querystring": "^0.2.0",
