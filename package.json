@@ -4,8 +4,8 @@
   "description": "get wechat access_token and sign on nodejs platform ",
   "main": "server.js",
   "scripts": {
-    "dev": "NODE_ENV=development node server",
-    "start": "NODE_ENV=production node server",
+    "dev": "node server",
+    "start": "node server",
     "build": "browserify public/main.js -o public/build/bundle.js",
     "watch": "watchify public/main.js -o public/build/bundle.js --debug --verbose"
   },
@@ -31,10 +31,25 @@
     "path": "^0.12.7",
     "querystring": "^0.2.0",
     "request": "^2.83.0",
+    "sha1": "^1.1.1"
+  },
+  "devDependencies": {
+    "body-parser": "^1.18.2",
+    "browserify": "^14.5.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "form-data": "^2.3.1",
+    "http": "0.0.0",
+    "jquery_wechat_sdk": "^1.4.4",
+    "morgan": "^1.9.0",
+    "node-cache": "^4.1.1",
+    "path": "^0.12.7",
+    "querystring": "^0.2.0",
+    "request": "^2.83.0",
+    "seq-queue": "0.0.5",
     "sha1": "^1.1.1",
     "watchify": "^3.9.0"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xulayen/wechathand.git"
